@@ -1,0 +1,74 @@
+[
+  {
+    "imageUrl": "files/gouwuquanfanbei.png",
+    "w": 74,
+    "h": 16,
+    "fit": {
+      "x": 0,
+      "y": 0,
+      "w": 74,
+      "h": 16,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 16,
+        "w": 74,
+        "h": 0
+      },
+      "right": {
+        "x": 74,
+        "y": 0,
+        "w": 0,
+        "h": 16
+      }
+    }
+  },
+  {
+    "imageUrl": "files/dianpuhongbao.png",
+    "w": 58,
+    "h": 16,
+    "fit": {
+      "x": 0,
+      "y": 16,
+      "w": 74,
+      "h": 16,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 32,
+        "w": 74,
+        "h": 0
+      },
+      "right": {
+        "x": 58,
+        "y": 16,
+        "w": 16,
+        "h": 16
+      }
+    }
+  },
+  {
+    "imageUrl": "files/nvwangjie.png",
+    "w": 42,
+    "h": 16,
+    "fit": {
+      "x": 0,
+      "y": 32,
+      "w": 74,
+      "h": 16,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 48,
+        "w": 74,
+        "h": 0
+      },
+      "right": {
+        "x": 42,
+        "y": 32,
+        "w": 32,
+        "h": 16
+      }
+    }
+  }
+]

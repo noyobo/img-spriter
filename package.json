@@ -1,0 +1,29 @@
+{
+  "name": "img-spriter",
+  "version": "0.1.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noyobo/img-spriter.git"
+  },
+  "keywords": [
+    "spriter",
+    "css",
+    "sprite"
+  ],
+  "author": "noyobo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noyobo/img-spriter/issues"
+  },
+  "homepage": "https://github.com/noyobo/img-spriter#readme",
+  "dependencies": {
+    "co": "~4.6.0",
+    "debug": "~2.2.0",
+    "pngjs": "~2.2.0"
+  }
+}
