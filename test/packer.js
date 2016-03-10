@@ -5,9 +5,18 @@ var arr = require('../files/data.js');
 
 var packer = new GrowingPacker();
 
+var margin = 10;
+
 arr.sort(function(a, b) {
   return b.w * b.h - a.w * a.h;
 });
+
+arr.map(function(a) {
+  a.w = a.w + margin;
+  a.h = a.h + margin;
+  
+  return a;
+})
 
 packer.fit(arr);
 
