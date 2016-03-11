@@ -1,0 +1,42 @@
+{
+  "name": "img-spriter",
+  "version": "0.1.0",
+  "description": "hello world",
+  "main": "index.js",
+  "scripts": {
+    "test": "babel index.es7.js -o index.js && node ./test/index-test.js",
+    "build": "babel index.es7.js -o index.js && echo 'ok'"
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "index.es7.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noyobo/img-spriter.git"
+  },
+  "keywords": [
+    "spriter",
+    "css",
+    "sprite"
+  ],
+  "author": "noyobo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/noyobo/img-spriter/issues"
+  },
+  "homepage": "https://github.com/noyobo/img-spriter#readme",
+  "dependencies": {
+    "debug": "~2.2.0",
+    "pngjs": "~2.2.0",
+    "request": "~2.69.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "~6.7.0",
+    "co": "~4.6.0"
+  }
+}
