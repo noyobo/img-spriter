@@ -10,7 +10,7 @@ const GrowingPacker = require('./lib/GrowingPacker.js');
 const png = require('./lib/png.js');
 
 const defaultOptions = {
-  margin: 0
+  margin: 5
 };
 
 function wrap(item, imageInfo) {
