@@ -1,16 +1,16 @@
 module.exports = [{
-  imageUrl: './files/dianpuhongbao.png',
-  filename: 'ac',
-  w: 58,
-  h: 16
-}, {
-  imageUrl: './files/gouwuquanfanbei.png',
+  imageUrl: 'http://img.alicdn.com/tps/i2/TB1fvaMLVXXXXbuXFXXEDhGGXXX-32-32.png',
   filename: 'acd',
-  w: 74,
-  h: 16
+  w: 32,
+  h: 32
 }, {
-  imageUrl: './files/nvwangjie.png',
+  imageUrl: 'http://img.alicdn.com/tps/i1/TB18_qELVXXXXaKXVXXEDhGGXXX-32-32.png',
   filename: 'ac12312',
-  w: 42,
-  h: 16
+  w: 32,
+  h: 32
+}, {
+  imageUrl: 'http://img.alicdn.com/tps/i2/TB1sEiZLVXXXXXxXFXXEDhGGXXX-32-32.png',
+  filename: 'ac12312',
+  w: 32,
+  h: 32
 }];

@@ -4,47 +4,83 @@
       "frame": {
         "y": 0,
         "x": 0,
-        "w": 74,
-        "h": 16
+        "w": 32,
+        "h": 32
       },
       "sourceSize": {
-        "h": 16,
-        "w": 74
+        "h": 32,
+        "w": 32
       },
-      "imageUrl": "/Users/noyobo/home/github/img-spriter/files/gouwuquanfanbei.png",
+      "sizeDiff": {
+        "w": [
+          true,
+          32,
+          32
+        ],
+        "h": [
+          true,
+          32,
+          32
+        ]
+      },
+      "imageUrl": "http://img.alicdn.com/tps/i2/TB1fvaMLVXXXXbuXFXXEDhGGXXX-32-32.png",
       "filename": "acd"
     },
     {
       "frame": {
-        "y": -21,
-        "x": 0,
-        "w": 74,
-        "h": 16
+        "y": 0,
+        "x": -37,
+        "w": 32,
+        "h": 32
       },
       "sourceSize": {
-        "h": 16,
-        "w": 58
+        "h": 32,
+        "w": 32
       },
-      "imageUrl": "/Users/noyobo/home/github/img-spriter/files/dianpuhongbao.png",
-      "filename": "ac"
+      "sizeDiff": {
+        "w": [
+          true,
+          32,
+          32
+        ],
+        "h": [
+          true,
+          32,
+          32
+        ]
+      },
+      "imageUrl": "http://img.alicdn.com/tps/i1/TB18_qELVXXXXaKXVXXEDhGGXXX-32-32.png",
+      "filename": "ac12312"
     },
     {
       "frame": {
-        "y": -42,
+        "y": -37,
         "x": 0,
-        "w": 74,
-        "h": 16
+        "w": 69,
+        "h": 32
       },
       "sourceSize": {
-        "h": 16,
-        "w": 42
+        "h": 32,
+        "w": 32
       },
-      "imageUrl": "/Users/noyobo/home/github/img-spriter/files/nvwangjie.png",
+      "sizeDiff": {
+        "w": [
+          true,
+          32,
+          32
+        ],
+        "h": [
+          true,
+          32,
+          32
+        ]
+      },
+      "imageUrl": "http://img.alicdn.com/tps/i2/TB1sEiZLVXXXXXxXFXXEDhGGXXX-32-32.png",
       "filename": "ac12312"
     }
   ],
   "meta": {
-    "height": 63,
-    "width": 79
+    "height": 74,
+    "width": 74
   }
 }
