@@ -14,8 +14,8 @@ function wrap(item, imageInfo) {
   item.imageInfo = imageInfo;
 
   item.sizeDiff = {
-    w: [item.w == imageInfo.width, item.w, imageInfo.width],
-    h: [item.h == imageInfo.height, item.h, imageInfo.height]
+    w: [item.w !== imageInfo.width, item.w, imageInfo.width],
+    h: [item.h !== imageInfo.height, item.h, imageInfo.height]
   }
 
   item.w = imageInfo.width;
@@ -127,6 +127,7 @@ module.exports = {
         'meta': {
           'height': outputPNG.height,
           'width': outputPNG.width,
+          'hash': Date.now().toString(32)
         }
       }
     }

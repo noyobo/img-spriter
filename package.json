@@ -4,11 +4,12 @@
   "description": "hello world",
   "main": "index.js",
   "scripts": {
-    "test": "babel index.es7.js -o index.js && node ./test/index-test.js"
+    "test": "babel index.es7.js -o index.js && node ./test/index-test.js",
+    "build": "babel index.es7.js -o index.js && echo 'ok'"
   },
   "files": [
     "lib/",
-    "index.js"
+    "index.js",
     "index.es7.js"
   ],
   "repository": {
@@ -31,7 +32,6 @@
   "homepage": "https://github.com/noyobo/img-spriter#readme",
   "dependencies": {
     "debug": "~2.2.0",
-    "object-assign": "~4.0.1",
     "pngjs": "~2.2.0",
     "request": "~2.69.0"
   },
