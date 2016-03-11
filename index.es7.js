@@ -25,17 +25,17 @@ function getImageInfo(arr) {
 /**
  * 生成 sprite 图片
  * @param  {Array} arr 图片队列
- * @param {String} imageQueue.imageUrl 图片地址
- * @param {String} imageQueue.w 图片宽度
- * @param {String} imageQueue.h 图片高度
+ * @param {String} imageFrames.imageUrl 图片地址
+ * @param {String} imageFrames.w 图片宽度
+ * @param {String} imageFrames.h 图片高度
  * @param  {Object} options    参数
  * @return {Stream}
  */
 
-module.exports = async function imgSpriter(imageQueue, options) {
+module.exports = async function imgSpriter(imageFrames, options) {
   options = Object.assign(defaultOptions, options || {});
   debug('options:', options)
-  imageQueue = await getImageInfo(imageQueue)
+  imageFrames = await getImageInfo(imageFrames)
     .catch(err => {
       debug(err);
       throw err;
@@ -44,24 +44,24 @@ module.exports = async function imgSpriter(imageQueue, options) {
   var packer = new GrowingPacker()
     // 排序图片
     // TODO: 支持更多排序算法
-  imageQueue.sort(function(a, b) {
+  imageFrames.sort(function(a, b) {
     return b.w * b.h - a.w * a.h;
   });
-  
+
   // 图标的间隔
-  imageQueue.map(function(a) {
+  imageFrames.map(function(a) {
     a.w = a.w + options.margin;
     a.h = a.h + options.margin;
     return a;
   })
-  packer.fit(imageQueue);
+  packer.fit(imageFrames);
 
   const outputPNG = png.create(
     packer.root.w,
     packer.root.h
   );
 
-  imageQueue.map(function(imageObj) {
+  imageFrames = imageFrames.map(function(imageObj) {
     var imageInfo = imageObj.imageInfo;
     var image = imageInfo.image;
     try {
@@ -72,16 +72,39 @@ module.exports = async function imgSpriter(imageQueue, options) {
         imageObj.fit.x,
         imageObj.fit.y
       );
-      delete imageObj.imageInfo;
     } catch (err) {
       debug(err);
       throw err;
     }
-    return imageObj;
-  })
 
+    var frame = {
+      'frame': {
+        'y': imageObj.fit.y * -1,
+        'x': imageObj.fit.x * -1,
+        'w': imageObj.fit.w - options.margin,
+        'h': imageObj.fit.h - options.margin
+      },
+      'sourceSize': {
+        'h': image.height,
+        'w': image.width
+      }
+    };
+    
+    delete imageObj.imageInfo;
+    delete imageObj.fit;
+    delete imageObj.w;
+    delete imageObj.h;
+    Object.assign(frame, imageObj);
+    return frame
+  })
   return {
     stream: outputPNG,
-    imageQueue: imageQueue
+    dataSource: {
+      'frames': imageFrames,
+      'meta': {
+        'height': outputPNG.height,
+        'width': outputPNG.width,
+      }
+    }
   }
 };

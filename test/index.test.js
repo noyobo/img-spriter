@@ -17,7 +17,7 @@ imgSpriter(data, {
     var spriteOutput = path.join(__dirname, './sprite.png');
     fs.writeFileSync(
       './test/index-output.json',
-      JSON.stringify(data.imageQueue, null, 2)
+      JSON.stringify(data.dataSource, null, 2)
     );
     data.stream.pack()
       .pipe(fs.createWriteStream(spriteOutput))

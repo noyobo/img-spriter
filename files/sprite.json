@@ -1,25 +1,27 @@
 {
-  "frames": [{
-    "frame": {
-      "y": -5,
-      "x": -5,
-      "w": 83,
-      "h": 12
-    },
-    "rotated": false,
-    "filename": "tianmao-large.png",
-    "trimmed": false,
-    "sourceSize": {
-      "h": 24,
-      "w": 166
-    },
-    "spriteSourceSize": {
-      "y": -5,
-      "x": -5,
-      "w": 83,
-      "h": 12
+  "frames": [
+    {
+      "frame": {
+        "y": -5,
+        "x": -5,
+        "w": 83,
+        "h": 12
+      },
+      "rotated": false,
+      "filename": "tianmao-large.png",
+      "trimmed": false,
+      "sourceSize": {
+        "h": 24,
+        "w": 166
+      },
+      "spriteSourceSize": {
+        "y": -5,
+        "x": -5,
+        "w": 83,
+        "h": 12
+      }
     }
-  }],
+  ],
   "meta": {
     "hash": "58d42fc42d",
     "name": "service",
