@@ -1,0 +1,74 @@
+[
+  {
+    "imageUrl": "/Users/noyobo/home/github/img-spriter/files/gouwuquanfanbei.png",
+    "w": 79,
+    "h": 21,
+    "fit": {
+      "x": 0,
+      "y": 0,
+      "w": 79,
+      "h": 21,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 21,
+        "w": 79,
+        "h": 0
+      },
+      "right": {
+        "x": 79,
+        "y": 0,
+        "w": 0,
+        "h": 21
+      }
+    }
+  },
+  {
+    "imageUrl": "/Users/noyobo/home/github/img-spriter/files/dianpuhongbao.png",
+    "w": 63,
+    "h": 21,
+    "fit": {
+      "x": 0,
+      "y": 21,
+      "w": 79,
+      "h": 21,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 42,
+        "w": 79,
+        "h": 0
+      },
+      "right": {
+        "x": 63,
+        "y": 21,
+        "w": 16,
+        "h": 21
+      }
+    }
+  },
+  {
+    "imageUrl": "/Users/noyobo/home/github/img-spriter/files/nvwangjie.png",
+    "w": 47,
+    "h": 21,
+    "fit": {
+      "x": 0,
+      "y": 42,
+      "w": 79,
+      "h": 21,
+      "used": true,
+      "down": {
+        "x": 0,
+        "y": 63,
+        "w": 79,
+        "h": 0
+      },
+      "right": {
+        "x": 47,
+        "y": 42,
+        "w": 32,
+        "h": 21
+      }
+    }
+  }
+]

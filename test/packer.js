@@ -1,5 +1,4 @@
 var GrowingPacker = require('../lib/GrowingPacker.js');
-
 var arr = require('../files/data.js');
 
 

@@ -4,7 +4,7 @@
   "description": "hello world",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "babel index.es7.js -o index.js && node ./test/index.test.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,12 @@
   },
   "homepage": "https://github.com/noyobo/img-spriter#readme",
   "dependencies": {
-    "co": "~4.6.0",
     "debug": "~2.2.0",
+    "object-assign": "~4.0.1",
     "pngjs": "~2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "~6.7.0",
+    "co": "~4.6.0"
   }
 }
