@@ -11,18 +11,25 @@ var fs = require('fs');
 imgSpriter.processHTTP(data)
   .then(function(data) {
     imgSpriter.sprite(data, {
-        margin: 5
+        margin: 5,
+        png8:true
       })
       .then(function(data) {
 
 
+        var spriteOutput8 = path.join(__dirname, './sprite-8.png');
         var spriteOutput = path.join(__dirname, './sprite.png');
 
         fs.writeFileSync(
           './test/index-output.json',
           JSON.stringify(data.dataSource, null, 2)
         );
-        data.stream.pack()
+        data.streamPNG8
+          .pipe(fs.createWriteStream(spriteOutput8))
+          .on('finish', function() {
+            console.log('>>Output image:', spriteOutput8);
+          });
+        data.stream
           .pipe(fs.createWriteStream(spriteOutput))
           .on('finish', function() {
             console.log('>>Output image:', spriteOutput);
