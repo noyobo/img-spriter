@@ -6,11 +6,14 @@ const debug = require('debug')('img-spriter');
 
 const path = require('path');
 const fs = require('fs');
+
+const Pngquant = require('pngquant');
 const GrowingPacker = require('./lib/GrowingPacker.js');
 const png = require('./lib/png.js');
 
 const defaultOptions = {
-  margin: 5
+  margin: 5,
+  png8: false
 };
 
 function wrap(item, imageInfo) {
@@ -111,7 +114,11 @@ module.exports = {
         Object.assign(frame, imageObj);
         return frame;
       });
-      return {
+
+      // Starts converting data to PNG file Stream.
+      outputPNG.pack();
+
+      const result = {
         stream: outputPNG,
         dataSource: {
           'frames': imageFrames,
@@ -122,6 +129,12 @@ module.exports = {
           }
         }
       };
+
+      if (options.png8) {
+        result.streamPNG8 = outputPNG.pipe(new Pngquant());
+      }
+
+      return result;
     });
 
     function spriter(_x, _x2) {
