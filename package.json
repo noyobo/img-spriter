@@ -1,6 +1,6 @@
 {
   "name": "img-spriter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "hello world",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
   "dependencies": {
     "debug": "~2.2.0",
     "pngjs": "~2.2.0",
+    "pngquant": "~0.6.0",
     "request": "~2.69.0"
   },
   "devDependencies": {
