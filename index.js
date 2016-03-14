@@ -131,7 +131,14 @@ module.exports = {
       };
 
       if (options.png8) {
-        result.streamPNG8 = outputPNG.pipe(new Pngquant());
+
+        const outputPNG8 = png.create(packer.root.w, packer.root.h);
+
+        outputPNG.bitblt(outputPNG8, 0, 0, packer.root.w, packer.root.h, 0, 0);
+
+        outputPNG8.pack();
+
+        result.streamPNG8 = outputPNG8.pipe(new Pngquant());
       }
 
       return result;

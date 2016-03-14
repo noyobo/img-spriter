@@ -123,9 +123,10 @@ module.exports = {
       Object.assign(frame, imageObj);
       return frame;
     });
-    
+
     // Starts converting data to PNG file Stream.
     outputPNG.pack();
+
 
     const result = {
       stream: outputPNG,
@@ -138,9 +139,23 @@ module.exports = {
         }
       }
     }
-    
+
     if (options.png8) {
-      result.streamPNG8 = outputPNG.pipe(new Pngquant())
+      // png24 converter png8
+      const outputPNG8 = png.create(
+        packer.root.w,
+        packer.root.h
+      );
+      
+      outputPNG.bitblt(outputPNG8, 0, 0,
+        packer.root.w,
+        packer.root.h,
+        0, 0
+      )
+      
+      outputPNG8.pack();
+      
+      result.streamPNG8 = outputPNG8.pipe(new Pngquant())
     }
 
     return result;
