@@ -1,16 +1,13 @@
 module.exports = [{
-  imageUrl: 'http://img.alicdn.com/tps/i2/TB1fvaMLVXXXXbuXFXXEDhGGXXX-32-32.png',
-  filename: 'acd',
-  w: 32,
-  h: 32
+  "name": "1212c",
+  "imageUrl": "http://img.alicdn.com/tps/TB1IfP9LFXXXXcwXXXXXXXXXXXX-60-16.png",
+  "w": 60,
+  "h": 16,
+  "title": "1212预售"
 }, {
-  imageUrl: 'http://img.alicdn.com/tps/i1/TB18_qELVXXXXaKXVXXEDhGGXXX-32-32.png',
-  filename: 'ac12312',
-  w: 32,
-  h: 32
-}, {
-  imageUrl: 'http://img.alicdn.com/tps/i2/TB1sEiZLVXXXXXxXFXXEDhGGXXX-32-32.png',
-  filename: 'ac12312',
-  w: 32,
-  h: 32
+  "name": "tianmaoguoji",
+  "imageUrl": "http://img.alicdn.com/tps/i4/TB1Ei2NLVXXXXafapXXX_l_HXXX-50-16.png",
+  "w": 50,
+  "h": 16,
+  "title": "天猫国际"
 }];
