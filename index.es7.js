@@ -66,6 +66,10 @@ module.exports = {
     options = Object.assign(defaultOptions, options || {});
 
     debug('options:', options);
+    
+    if (options.retina) {
+      options.margin = options.margin * 2;
+    }
 
     var packer = new GrowingPacker()
       // 排序图片

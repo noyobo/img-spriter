@@ -67,6 +67,10 @@ module.exports = {
 
       debug('options:', options);
 
+      if (options.retina) {
+        options.margin = options.margin * 2;
+      }
+
       var packer = new GrowingPacker();
       // 排序图片
       // TODO: 支持更多排序算法
@@ -131,7 +135,7 @@ module.exports = {
       };
 
       if (options.png8) {
-
+        // png24 converter png8
         const outputPNG8 = png.create(packer.root.w, packer.root.h);
 
         outputPNG.bitblt(outputPNG8, 0, 0, packer.root.w, packer.root.h, 0, 0);
