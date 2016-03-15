@@ -10,7 +10,8 @@ const png = require('./lib/png.js');
 
 const defaultOptions = {
   margin: 5,
-  png8: false
+  png8: false,
+  dpi: 1,
 }
 
 function wrap(item, imageInfo) {
@@ -67,9 +68,7 @@ module.exports = {
 
     debug('options:', options);
     
-    if (options.retina) {
-      options.margin = options.margin * 2;
-    }
+    options.margin = options.margin * options.dpi;
 
     var packer = new GrowingPacker()
       // 排序图片
@@ -109,10 +108,10 @@ module.exports = {
 
       var frame = {
         'frame': {
-          'y': imageObj.fit.y * -1,
-          'x': imageObj.fit.x * -1,
-          'w': imageObj.fit.w - options.margin,
-          'h': imageObj.fit.h - options.margin
+          'y': (imageObj.fit.y * -1) / options.dpi,
+          'x': (imageObj.fit.x * -1) / options.dpi,
+          'w': (imageObj.fit.w - options.margin) / options.dpi,
+          'h': (imageObj.fit.h - options.margin) / options.dpi
         },
         'sourceSize': {
           'h': image.height,
@@ -139,8 +138,12 @@ module.exports = {
         'meta': {
           'height': outputPNG.height,
           'width': outputPNG.width,
-          'hash': Date.now().toString(32)
-        }
+          'originWidth': outputPNG.width,
+          'originHeight': outputPNG.height,
+          'hash': Date.now().toString(32),
+          'dpi': options.dpi
+        },
+        'options': options
       }
     }
 
