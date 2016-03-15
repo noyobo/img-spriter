@@ -4,6 +4,7 @@ const debug = require('debug')('img-spriter');
 const path = require('path');
 const fs = require('fs');
 
+const merge = require('object-merge');
 const Pngquant = require('pngquant');
 const GrowingPacker = require('./lib/GrowingPacker.js');
 const png = require('./lib/png.js');
@@ -64,7 +65,7 @@ module.exports = {
    * @return {Stream}
    */
   sprite: async function spriter(imageFrames, options) {
-    options = Object.assign(defaultOptions, options || {});
+    options = merge(defaultOptions, options || {});
 
     debug('options:', options);
     

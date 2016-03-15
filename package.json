@@ -1,6 +1,6 @@
 {
   "name": "img-spriter",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "hello world",
   "main": "index.js",
   "scripts": {
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/noyobo/img-spriter#readme",
   "dependencies": {
     "debug": "~2.2.0",
+    "object-merge": "^2.5.1",
     "pngjs": "~2.2.0",
     "pngquant": "~0.6.0",
     "request": "~2.69.0"
