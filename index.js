@@ -84,6 +84,7 @@ module.exports = {
         a.h = a.h + options.margin;
         return a;
       });
+
       packer.fit(imageFrames);
 
       const outputPNG = png.create(packer.root.w, packer.root.h);
@@ -102,8 +103,8 @@ module.exports = {
           'frame': {
             'y': imageObj.fit.y * -1 / options.dpi,
             'x': imageObj.fit.x * -1 / options.dpi,
-            'w': (imageObj.fit.w - options.margin) / options.dpi,
-            'h': (imageObj.fit.h - options.margin) / options.dpi
+            'w': imageObj.w / options.dpi,
+            'h': imageObj.h / options.dpi
           },
           'sourceSize': {
             'h': image.height,
@@ -127,8 +128,8 @@ module.exports = {
         dataSource: {
           'frames': imageFrames,
           'meta': {
-            'height': outputPNG.height,
-            'width': outputPNG.width,
+            'height': outputPNG.height / options.dpi,
+            'width': outputPNG.width / options.dpi,
             'originWidth': outputPNG.width,
             'originHeight': outputPNG.height,
             'hash': Date.now().toString(32),
