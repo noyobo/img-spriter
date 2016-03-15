@@ -4,84 +4,68 @@
       "frame": {
         "y": 0,
         "x": 0,
-        "w": 32,
-        "h": 32
+        "w": 65,
+        "h": 21
       },
       "sourceSize": {
-        "h": 32,
-        "w": 32
+        "h": 16,
+        "w": 60
       },
-      "filename": "acd",
-      "imageUrl": "http://img.alicdn.com/tps/i2/TB1fvaMLVXXXXbuXFXXEDhGGXXX-32-32.png",
+      "imageUrl": "http://img.alicdn.com/tps/TB1IfP9LFXXXXcwXXXXXXXXXXXX-60-16.png",
+      "name": "1212c",
+      "title": "1212预售",
       "sizeDiff": {
         "w": [
           false,
-          32,
-          32
+          60,
+          60
         ],
         "h": [
           false,
-          32,
-          32
+          16,
+          16
         ]
       }
     },
     {
       "frame": {
-        "y": 0,
-        "x": -37,
-        "w": 32,
-        "h": 32
-      },
-      "sourceSize": {
-        "h": 32,
-        "w": 32
-      },
-      "filename": "ac12312",
-      "imageUrl": "http://img.alicdn.com/tps/i1/TB18_qELVXXXXaKXVXXEDhGGXXX-32-32.png",
-      "sizeDiff": {
-        "w": [
-          false,
-          32,
-          32
-        ],
-        "h": [
-          false,
-          32,
-          32
-        ]
-      }
-    },
-    {
-      "frame": {
-        "y": -37,
+        "y": -21,
         "x": 0,
-        "w": 69,
-        "h": 32
+        "w": 55,
+        "h": 21
       },
       "sourceSize": {
-        "h": 32,
-        "w": 32
+        "h": 16,
+        "w": 50
       },
-      "filename": "ac12312",
-      "imageUrl": "http://img.alicdn.com/tps/i2/TB1sEiZLVXXXXXxXFXXEDhGGXXX-32-32.png",
+      "imageUrl": "http://img.alicdn.com/tps/i4/TB1Ei2NLVXXXXafapXXX_l_HXXX-50-16.png",
+      "name": "tianmaoguoji",
+      "title": "天猫国际",
       "sizeDiff": {
         "w": [
           false,
-          32,
-          32
+          50,
+          50
         ],
         "h": [
           false,
-          32,
-          32
+          16,
+          16
         ]
       }
     }
   ],
   "meta": {
-    "height": 74,
-    "width": 74,
-    "hash": "1adpgumr2"
+    "height": 42,
+    "width": 65,
+    "originWidth": 65,
+    "originHeight": 42,
+    "hash": "1adsm0dtr",
+    "dpi": 1
+  },
+  "options": {
+    "margin": 5,
+    "png8": true,
+    "dpi": 1
   }
 }
