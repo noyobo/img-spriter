@@ -1,6 +1,6 @@
 'use strict';
 const debug = require('debug')('img-spriter');
-
+const assert = require('assert');
 const path = require('path');
 const fs = require('fs');
 
@@ -108,12 +108,14 @@ module.exports = {
         throw err;
       }
       
+      console.log(imageObj);
+      
       var frame = {
         'frame': {
           'y': (imageObj.fit.y * -1) / options.dpi,
           'x': (imageObj.fit.x * -1) / options.dpi,
-          'w': imageObj.w / options.dpi,
-          'h': imageObj.h / options.dpi
+          'w': (imageObj.w - options.margin) / options.dpi,
+          'h': (imageObj.h - options.margin) / options.dpi
         },
         'sourceSize': {
           'h': image.height,
