@@ -1,8 +1,5 @@
 'use strict';
 const debug = require('debug')('img-spriter');
-const assert = require('assert');
-const path = require('path');
-const fs = require('fs');
 
 const merge = require('object-merge');
 const Pngquant = require('pngquant');
@@ -13,7 +10,7 @@ const defaultOptions = {
   margin: 5,
   png8: false,
   dpi: 1,
-}
+};
 
 function wrap(item, imageInfo) {
   item.imageInfo = imageInfo;
@@ -21,7 +18,7 @@ function wrap(item, imageInfo) {
   item.sizeDiff = {
     w: [item.w !== imageInfo.width, item.w, imageInfo.width],
     h: [item.h !== imageInfo.height, item.h, imageInfo.height]
-  }
+  };
 
   item.w = imageInfo.width;
   item.h = imageInfo.height;
@@ -31,27 +28,27 @@ function wrap(item, imageInfo) {
 function getImageInfo(arr) {
   return Promise.all(arr.map(function(item, key) {
     if (!item.imageUrl) {
-      throw new Error('imageUrl is required!')
+      throw new Error('imageUrl is required!');
     }
     return png
       .readInfo(item.imageUrl)
       .then((imageInfo) => {
         return wrap(item, imageInfo);
       });
-  }))
+  }));
 }
 
 function getImageInfoByHTTP(arr) {
   return Promise.all(arr.map(function(item, key) {
     if (!item.imageUrl) {
-      throw new Error('imageUrl is required!')
+      throw new Error('imageUrl is required!');
     }
     return png
       .readInfoByHTTP(item.imageUrl)
       .then((imageInfo) => {
         return wrap(item, imageInfo);
       });
-  }))
+  }));
 }
 
 module.exports = {
@@ -68,10 +65,10 @@ module.exports = {
     options = merge(defaultOptions, options || {});
 
     debug('options:', options);
-    
+
     options.margin = options.margin * options.dpi;
 
-    var packer = new GrowingPacker()
+    var packer = new GrowingPacker();
       // 排序图片
       // TODO: 支持更多排序算法
     imageFrames.sort(function(a, b) {
@@ -83,7 +80,7 @@ module.exports = {
       a.w = a.w + options.margin;
       a.h = a.h + options.margin;
       return a;
-    })
+    });
 
     packer.fit(imageFrames);
 
@@ -107,9 +104,7 @@ module.exports = {
         debug(err);
         throw err;
       }
-      
-      console.log(imageObj);
-      
+
       var frame = {
         'frame': {
           'y': (imageObj.fit.y * -1) / options.dpi,
@@ -148,7 +143,7 @@ module.exports = {
         },
         'options': options
       }
-    }
+    };
 
     if (options.png8) {
       // png24 converter png8
@@ -156,16 +151,16 @@ module.exports = {
         packer.root.w,
         packer.root.h
       );
-      
+
       outputPNG.bitblt(outputPNG8, 0, 0,
         packer.root.w,
         packer.root.h,
         0, 0
-      )
-      
+      );
+
       outputPNG8.pack();
-      
-      result.streamPNG8 = outputPNG8.pipe(new Pngquant())
+
+      result.streamPNG8 = outputPNG8.pipe(new Pngquant());
     }
 
     return result;

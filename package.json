@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "babel index.es7.js -o index.js && node ./test/index-test.js",
-    "build": "babel index.es7.js -o index.js && echo 'ok'"
+    "build": "babel index.es7.js -o index.js && echo 'ok'",
+    "prepublish": "npm run build"
   },
   "files": [
     "lib/",
