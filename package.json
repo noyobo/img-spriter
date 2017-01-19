@@ -34,8 +34,8 @@
   "dependencies": {
     "debug": "~2.2.0",
     "object-merge": "^2.5.1",
-    "pngjs": "~2.2.0",
-    "pngquant": "~0.6.0",
+    "pngjs": "~3.0.0",
+    "pngquant": "~1.1.1",
     "request": "~2.69.0"
   },
   "devDependencies": {
