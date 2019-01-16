@@ -12,6 +12,8 @@
         "w": 60
       },
       "name": "1212c",
+      "imageUrl": "http://img.alicdn.com/tps/TB1IfP9LFXXXXcwXXXXXXXXXXXX-60-16.png",
+      "title": "1212预售",
       "sizeDiff": {
         "w": [
           false,
@@ -23,9 +25,7 @@
           16,
           16
         ]
-      },
-      "imageUrl": "http://img.alicdn.com/tps/TB1IfP9LFXXXXcwXXXXXXXXXXXX-60-16.png",
-      "title": "1212预售"
+      }
     },
     {
       "frame": {
@@ -39,6 +39,8 @@
         "w": 50
       },
       "name": "tianmaoguoji",
+      "imageUrl": "http://img.alicdn.com/tps/i4/TB1Ei2NLVXXXXafapXXX_l_HXXX-50-16.png",
+      "title": "天猫国际",
       "sizeDiff": {
         "w": [
           false,
@@ -50,9 +52,7 @@
           16,
           16
         ]
-      },
-      "imageUrl": "http://img.alicdn.com/tps/i4/TB1Ei2NLVXXXXafapXXX_l_HXXX-50-16.png",
-      "title": "天猫国际"
+      }
     }
   ],
   "meta": {
@@ -60,7 +60,7 @@
     "width": 65,
     "originWidth": 65,
     "originHeight": 42,
-    "hash": "1b6qbqgtj",
+    "hash": "1d1asgr9e",
     "dpi": 1
   },
   "options": {
