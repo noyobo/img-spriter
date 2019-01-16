@@ -1,5 +1,7 @@
 # img-spriter
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/noyobo/img-spriter.svg)](https://greenkeeper.io/)
+
 image sprite generator
 
 ## API
