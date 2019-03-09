@@ -30,7 +30,7 @@
   "dependencies": {
     "debug": "~4.1.1",
     "object-merge": "^2.5.1",
-    "pngjs": "~3.3.3",
+    "pngjs": "~3.4.0",
     "pngquant": "~2.0.1",
     "request": "~2.88.0"
   },
